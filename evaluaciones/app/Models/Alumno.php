@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Alumno extends Model
 {
     use HasFactory;
+    protected $fillable = ["nombre"];
 
     public function notas(){
         return $this->hasMany(Nota::class);

@@ -13,7 +13,7 @@ class Nota extends Model
         return $this->belongsTo(Alumno::class);
     }
 
-    public function ccee(){
+    public function ce(){
         return $this->belongsTo(Ce::class);
     }
 }
