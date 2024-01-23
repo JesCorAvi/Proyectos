@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Alumno;
-use App\Models\Ce;
-use App\Models\Nota;
 
 
 

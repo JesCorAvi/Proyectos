@@ -20,7 +20,14 @@
                     <a href="{{route("alumnos.show", $alumno)}}">{{$alumno->nombre}}</a>
                 </td>
                 <td>
-                    {{$alumno->notas->flatMap->nota->count()}}
+                    @php
+                        $listaNotas = [];
+                        foreach ($alumno->notas as $nota) {
+                            array_push($listaNotas, $nota->nota);
+                        }
+                        $total = array_sum($listaNotas)/count($listaNotas);
+                    @endphp
+                        {{$total}}
                 </td>
                 <td>
                     <form action="{{route("alumnos.edit", $alumno)}}" method="GET">
